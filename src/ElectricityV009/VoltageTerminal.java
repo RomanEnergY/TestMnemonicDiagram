@@ -1,0 +1,31 @@
+package ElectricityV009;
+
+/** Напряжение на контакте
+ *
+ * Зверик Роман Станиславович 14.05.2018.
+ */
+public class VoltageTerminal {
+    private EventElectricity eventElectricity; // событие наличия напряжения
+    private Contact contact; // путь тока от генератора до контакта соединения
+
+    VoltageTerminal(EventElectricity eventElectricity, Contact contact) {
+        this.eventElectricity = eventElectricity;
+        this.contact = contact;
+    }
+
+    EventElectricity geEventElectricity() {
+        return this.eventElectricity;
+    }
+
+    public Contact getContact() {
+        return this.contact;
+    }
+
+    @Override
+    public String toString() {
+        return "ContactEventElectricity{" +
+                "eventElectricity=" + this.eventElectricity +
+                ", contact=" + this.contact +
+                '}';
+    }
+}
